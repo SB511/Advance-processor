@@ -1,0 +1,20 @@
+AIM:-Add two 16bit numbers using 8086
+
+
+data segment
+a dw 1010h
+b dw 2012h   
+c dw ?
+data ends
+
+code segment
+assume cs:code,ds:data
+start :       
+mov ax,data
+mov ds,ax
+mov ax,a
+mov bx,b
+div ax
+mov c,ax
+code ends
+end start
